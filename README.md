@@ -1,73 +1,97 @@
-# Welcome to your Lovable project
+# ACR Delivery System 🚀
 
-## Project info
+Sistema completo de gestão de entregas com **3 módulos integrados**: Cliente, Motorista e Admin.
 
-**URL**: https://lovable.dev/projects/01a6533d-4e72-4398-b369-35c5314cf981
+## 🎨 Design Premium
 
-## How can I edit this code?
+- **Verde Neon** (#ADFF2F) - Cor primária
+- **Dourado** (#FFD700) - Cor secundária  
+- **Fundo Preto** - Background moderno
+- Animações fluidas e efeitos glow
+- Totalmente responsivo (mobile-first)
 
-There are several ways of editing your application.
+## 📱 PWA (Progressive Web App)
 
-**Use Lovable**
+✅ Instalável em qualquer dispositivo (Android, iOS, Desktop)  
+✅ Funciona offline  
+✅ Notificações push  
+✅ Performance otimizada  
+✅ Experiência nativa
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/01a6533d-4e72-4398-b369-35c5314cf981) and start prompting.
+## 🏗️ Módulos
 
-Changes made via Lovable will be committed automatically to this repo.
+### 👤 Cliente
+- Catálogo de produtos com 3 modos de visualização
+- Carrinho de compras persistente
+- Cálculo automático de frete (ViaCEP)
+- Rastreamento em tempo real
+- Histórico de pedidos
+- Avaliações
 
-**Use your preferred IDE**
+### 🏍️ Motorista  
+- Dashboard de entregas disponíveis
+- Notificações persistentes com som
+- Captura de fotos e assinatura digital
+- Rastreamento GPS em tempo real
+- Carteira e ganhos
+- Performance e ranking
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### ⚙️ Admin
+- Dashboard completo em tempo real
+- Gestão de produtos (CRUD)
+- Gestão de pedidos e motoristas
+- Relatórios e analytics
+- Configurações de frete
+- Promoções e cupons
+- Políticas LGPD
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Como Usar
 
-Follow these steps:
+Este projeto está configurado para rodar no Lovable. Próximos passos sugeridos:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. **Ativar Lovable Cloud** - Para backend completo (PostgreSQL, Auth, Storage)
+2. **Desenvolver funcionalidades** - Catálogos, pedidos, rastreamento
+3. **Integrar APIs** - ViaCEP, Google Maps, Firebase, Bling ERP
+4. **Deploy** - Publicar via Lovable com domínio customizado
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🔧 Tecnologias
 
-# Step 3: Install the necessary dependencies.
-npm i
+- **Frontend**: React 18 + TypeScript + Vite
+- **UI**: Tailwind CSS + shadcn/ui
+- **PWA**: Service Worker + Manifest
+- **Backend**: Lovable Cloud (Supabase) ou NestJS
+- **Database**: PostgreSQL + PostGIS
+- **Real-time**: Socket.IO
+- **Mapas**: Google Maps API / Mapbox
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## 📦 Integrações Planejadas
 
-**Edit a file directly in GitHub**
+- ✅ ViaCEP (preenchimento automático de CEP)
+- ⏳ Google Maps (rotas e geolocalização)
+- ⏳ Firebase Cloud Messaging (notificações)
+- ⏳ Bling ERP (sincronização de produtos)
+- ⏳ Stripe/MercadoPago (pagamentos)
+- ⏳ Google Business (avaliações)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🎯 Status Atual
 
-**Use GitHub Codespaces**
+✅ Design system premium configurado  
+✅ Home de seleção de perfil  
+✅ Estrutura dos 3 módulos  
+✅ PWA configurado e instalável  
+✅ Animações e efeitos visuais  
+✅ Logo ACR com asas gerado  
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+**Próximo**: Implementar funcionalidades de cada módulo iterativamente.
 
-## What technologies are used for this project?
+## 📝 Notas Técnicas
 
-This project is built with:
+- Todas as cores usam HSL no design system
+- Semantic tokens para consistência visual
+- Animações respeitam `prefers-reduced-motion`
+- Acessibilidade WCAG AA
+- Mobile-first, 100% responsivo
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/01a6533d-4e72-4398-b369-35c5314cf981) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+**Desenvolvido com ❤️ para ACR Delivery System**

@@ -1,0 +1,27 @@
+{
+  "name": "ACR Delivery System",
+  "short_name": "ACR Delivery",
+  "description": "Sistema completo de gestão para entregas e vendas",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#ADFF2F",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "shopping"],
+  "lang": "pt-BR",
+  "dir": "ltr"
+}
