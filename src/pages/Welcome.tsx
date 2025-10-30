@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { ShoppingBag, Bike, Settings } from "lucide-react";
+import { ShoppingBag, Bike, Shield, Store } from "lucide-react";
 
 const Welcome = () => {
   const navigate = useNavigate();
@@ -15,18 +15,26 @@ const Welcome = () => {
       gradient: "from-primary/20 to-primary/5",
     },
     {
+      id: "lojista",
+      title: "Lojista",
+      description: "Gerencie seu catálogo, vendas e estoque",
+      icon: Store,
+      path: "/lojista",
+      gradient: "from-secondary/20 to-secondary/5",
+    },
+    {
       id: "motorista",
       title: "Motorista",
       description: "Aceite entregas, ganhe dinheiro e monitore seus ganhos",
       icon: Bike,
       path: "/motorista",
-      gradient: "from-secondary/20 to-secondary/5",
+      gradient: "from-blue-500/20 to-blue-500/5",
     },
     {
       id: "admin",
       title: "Admin",
       description: "Gerencie todo o sistema, produtos e entregas",
-      icon: Settings,
+      icon: Shield,
       path: "/admin",
       gradient: "from-purple-500/20 to-purple-500/5",
     },
@@ -67,7 +75,7 @@ const Welcome = () => {
         </div>
 
         {/* Profile Cards */}
-        <div className="flex-1 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto w-full">
+        <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto w-full">
           {profiles.map((profile, index) => {
             const Icon = profile.icon;
             return (
