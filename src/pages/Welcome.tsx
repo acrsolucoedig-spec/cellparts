@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { ShoppingBag, Bike, Shield, Store } from "lucide-react";
+import acrLogoFull from "@/assets/acr-logo-full.jpeg";
+import acrWings from "@/assets/acr-wings.png";
 
 const Welcome = () => {
   const navigate = useNavigate();
@@ -41,9 +43,9 @@ const Welcome = () => {
   ];
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-b from-black via-black to-green-950">
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-b from-black via-green-950 to-black">
       {/* Animated Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
           backgroundImage: `radial-gradient(circle at 25% 25%, hsl(84, 100%, 59%) 2px, transparent 2px),
                            radial-gradient(circle at 75% 75%, hsl(51, 100%, 50%) 2px, transparent 2px)`,
@@ -51,25 +53,50 @@ const Welcome = () => {
         }} />
       </div>
 
+      {/* Floating Wings Background - Decorative */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-10">
+        <img 
+          src={acrWings} 
+          alt="" 
+          className="absolute top-20 left-10 w-64 h-64 object-contain animate-float"
+          style={{ animationDelay: '0s' }}
+        />
+        <img 
+          src={acrWings} 
+          alt="" 
+          className="absolute bottom-20 right-10 w-96 h-96 object-contain animate-float"
+          style={{ animationDelay: '2s', transform: 'scaleX(-1)' }}
+        />
+      </div>
+
       {/* Floating Orbs */}
-      <div className="absolute top-20 left-20 w-64 h-64 bg-primary/20 rounded-full blur-3xl animate-float" />
+      <div className="absolute top-20 left-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-20 right-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
 
       <div className="relative z-10 container mx-auto px-4 py-12 min-h-screen flex flex-col">
-        {/* Logo and Title */}
-        <div className="text-center mb-12 animate-fade-in">
-          <div className="inline-block mb-6">
-            <div className="relative">
-              <div className="absolute inset-0 bg-primary/30 blur-2xl rounded-full animate-glow-pulse" />
-              <h1 className="relative text-6xl md:text-8xl font-bold text-primary text-glow">
-                ACR
-              </h1>
+        {/* Logo Principal */}
+        <div className="text-center mb-8 animate-fade-in">
+          <div className="inline-block relative">
+            {/* Glow Effect */}
+            <div className="absolute inset-0 blur-2xl opacity-60 animate-glow-pulse">
+              <div className="w-full h-full bg-gradient-to-br from-primary via-secondary to-primary rounded-2xl" />
             </div>
+            
+            {/* Logo Image */}
+            <img 
+              src={acrLogoFull} 
+              alt="ACR - Soluções Digitais | Marketplace | Reparos" 
+              className="relative w-full max-w-2xl mx-auto h-auto drop-shadow-2xl"
+              style={{
+                filter: 'drop-shadow(0 0 30px rgba(173, 255, 47, 0.5)) drop-shadow(0 0 60px rgba(255, 215, 0, 0.3))'
+              }}
+            />
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+
+          <h2 className="text-2xl md:text-3xl font-bold mt-6 text-primary">
             Delivery System
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mt-2">
             Sistema completo de gestão para entregas e vendas
           </p>
         </div>
@@ -104,7 +131,7 @@ const Welcome = () => {
                     </h3>
 
                     {/* Description */}
-                    <p className="text-muted-foreground mb-8 flex-1">
+                    <p className="text-muted-foreground mb-8 flex-1 text-sm">
                       {profile.description}
                     </p>
 
@@ -125,8 +152,11 @@ const Welcome = () => {
 
         {/* Footer */}
         <div className="text-center mt-12 animate-fade-in" style={{ animationDelay: '600ms' }}>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-xs md:text-sm text-muted-foreground">
             Versão 1.0.0 • Sistema de gestão completo para entregas
+          </p>
+          <p className="text-xs text-muted-foreground mt-2 opacity-70">
+            Soluções Digitais | Marketplace | Reparos
           </p>
         </div>
       </div>

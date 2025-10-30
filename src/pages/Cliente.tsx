@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft, ShoppingCart, Package, User, History } from "lucide-react";
+import { ShoppingCart, Package, User, History } from "lucide-react";
+import PageHeader from "@/components/PageHeader";
 
 const Cliente = () => {
   const navigate = useNavigate();
@@ -35,18 +36,7 @@ const Cliente = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-black to-green-950">
       <div className="container mx-auto px-4 py-8">
-        {/* Header */}
-        <div className="flex items-center justify-between mb-8">
-          <Button
-            variant="ghost"
-            onClick={() => navigate("/")}
-            className="text-muted-foreground hover:text-foreground"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Voltar
-          </Button>
-          <div className="text-primary font-bold text-2xl">ACR</div>
-        </div>
+        <PageHeader />
 
         {/* Title */}
         <div className="text-center mb-12 animate-fade-in">

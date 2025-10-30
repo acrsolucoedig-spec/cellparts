@@ -46,8 +46,8 @@ const PWAInstallPrompt = () => {
         </button>
 
         <div className="flex items-start gap-4">
-          <div className="w-16 h-16 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0">
-            <img src="/icon-192.png" alt="ACR Logo" className="w-12 h-12" />
+          <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 border border-primary/20 flex items-center justify-center flex-shrink-0 overflow-hidden">
+            <img src="/icon-192.png" alt="ACR Logo" className="w-full h-full object-cover" />
           </div>
 
           <div className="flex-1">
