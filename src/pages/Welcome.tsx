@@ -109,10 +109,10 @@ const Welcome = () => {
           {/* Logo central removida conforme solicitado */}
 
           <h2
-            className="text-2xl md:text-3xl font-bold mt-3 cp-title"
+            className="text-3xl md:text-4xl font-bold mt-3 cp-title"
             style={{
               color: neon,
-              textShadow: `0 0 1px ${neon}, 0 0 4px ${neonBright}`,
+              textShadow: "none",
               transition: "color 1000ms ease-in-out, text-shadow 1000ms ease-in-out",
             }}
           >
