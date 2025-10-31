@@ -8,6 +8,11 @@ import Cliente from "./pages/Cliente";
 import Lojista from "./pages/Lojista";
 import Motorista from "./pages/Motorista";
 import Admin from "./pages/Admin";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
+import OrderConfirmation from "./pages/OrderConfirmation";
+import OrderHistory from "./pages/OrderHistory";
+import ProductDetail from "./pages/ProductDetail";
 import NotFound from "./pages/NotFound";
 import PWAInstallPrompt from "./components/PWAInstallPrompt";
 
@@ -26,6 +31,11 @@ const App = () => (
           <Route path="/lojista" element={<Lojista />} />
           <Route path="/motorista" element={<Motorista />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/order/:id" element={<OrderConfirmation />} />
+          <Route path="/orders" element={<OrderHistory />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

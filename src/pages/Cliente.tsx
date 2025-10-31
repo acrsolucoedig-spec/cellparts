@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { ShoppingCart, Package, User, History } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
+import { AddressForm } from "@/components/AddressForm";
+import { ProductCatalog } from "@/components/ProductCatalog";
 
 const Cliente = () => {
   const navigate = useNavigate();
@@ -21,9 +23,10 @@ const Cliente = () => {
     },
     {
       icon: History,
-      title: "Histórico",
+      title: "Histórico de Pedidos",
       description: "Veja todas as suas compras anteriores",
       soon: false,
+      path: "/orders",
     },
     {
       icon: User,
@@ -46,6 +49,19 @@ const Cliente = () => {
           <p className="text-lg text-muted-foreground">
             Bem-vindo! Faça seu pedido e acompanhe sua entrega
           </p>
+        </div>
+
+        {/* Address Form Demo */}
+        <div className="max-w-2xl mx-auto mb-12 bg-card p-6 rounded-lg border animate-fade-in-up">
+          <AddressForm />
+        </div>
+
+        {/* Product Catalog */}
+        <div className="mb-12 animate-fade-in-up">
+          <h2 className="text-3xl font-bold mb-6 text-center bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            Catálogo de Produtos
+          </h2>
+          <ProductCatalog />
         </div>
 
         {/* Features Grid */}
@@ -76,6 +92,15 @@ const Cliente = () => {
                         <span className="inline-block mt-2 text-xs text-secondary font-semibold">
                           Em breve
                         </span>
+                      )}
+                      {feature.path && !feature.soon && (
+                        <Button
+                          size="sm"
+                          className="mt-3"
+                          onClick={() => navigate(feature.path)}
+                        >
+                          Acessar
+                        </Button>
                       )}
                     </div>
                   </div>

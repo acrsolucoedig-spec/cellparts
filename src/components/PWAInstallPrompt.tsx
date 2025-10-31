@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { X, Download } from "lucide-react";
 import { installPWA, hideInstallPrompt, isPWAInstalled } from "@/lib/pwa";
+import acrWings from "@/assets/acr-wings.png";
 
 const PWAInstallPrompt = () => {
   const [show, setShow] = useState(false);
@@ -45,9 +46,19 @@ const PWAInstallPrompt = () => {
           <X className="w-4 h-4" />
         </button>
 
-        <div className="flex items-start gap-4">
-          <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 border border-primary/20 flex items-center justify-center flex-shrink-0 overflow-hidden">
-            <img src="/icon-192.png" alt="ACR Logo" className="w-full h-full object-cover" />
+        <div className="flex items-start gap-3">
+          {/* Small neon icon */}
+          <div
+            className="rounded-full flex items-center justify-center flex-shrink-0"
+            style={{
+              width: 32,
+              height: 32,
+              background: "radial-gradient(circle at 30% 30%, hsl(84 100% 50%), hsl(84 100% 60%))",
+              boxShadow: "0 0 8px hsla(84,100%,60%,0.4)",
+              border: "1px solid hsla(84,100%,60%,0.3)",
+            }}
+          >
+            <img src={acrWings} alt="ACR Icon" className="object-contain" style={{ width: 18, height: 18 }} />
           </div>
 
           <div className="flex-1">

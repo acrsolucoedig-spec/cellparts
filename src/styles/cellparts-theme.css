@@ -1,0 +1,19 @@
+:root{--cp-bg-start:#050505;--cp-bg-end:#0A0F0A;--cp-green:#A4FF00;--cp-green-2:#B4FF4F;--cp-text-2:#BFBFBF;--cp-card-border:rgba(164,255,0,0.2)}
+.cp-bg{background:linear-gradient(180deg,var(--cp-bg-start) 0%,var(--cp-bg-end) 100%)}
+.cp-body{background:radial-gradient(circle at top,#0E160E 0%,#000 100%);overflow:hidden}
+.background-effect{position:absolute;inset:0;background:var(--cp-bg-image,none) center/cover no-repeat;opacity:.1;filter:blur(6px);pointer-events:none}
+.glow{filter:drop-shadow(0 0 10px var(--cp-green)) drop-shadow(0 0 22px var(--cp-green))}
+.cp-title{font-family:Poppins,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:3rem;font-weight:700;color:var(--cp-green);text-shadow:0 0 10px rgba(164,255,0,.45)}
+.cp-text{font-family:Poppins,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--cp-text-2);letter-spacing:.2px;line-height:1.5}
+.cp-card{background:rgba(10,15,10,.95);border:1px solid rgba(164,255,0,.15);border-radius:16px;padding:2rem;box-shadow:0 8px 24px rgba(164,255,0,.18);transition:all .3s ease}
+.cp-card:hover{box-shadow:0 12px 36px rgba(164,255,0,.35);transform:translateY(-3px) scale(1.01)}
+.cp-button{background:var(--cp-green);color:#000;border:none;border-radius:12px;font-weight:600;padding:.8rem 2rem;font-size:1rem;transition:all .3s ease;box-shadow:0 8px 18px rgba(164,255,0,.35)}
+.cp-button:hover{background:#B8FF2F;box-shadow:0 10px 28px rgba(164,255,0,.6);transform:scale(1.03)}
+.container-cp{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;text-align:center}
+.cards-cp{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;margin-top:2rem}
+.cp-border{border:1px solid var(--cp-card-border)}
+.cp-pill{border-radius:9999px}
+.cp-icon-circle{border-radius:9999px;background:radial-gradient(circle at 30% 30%,var(--cp-green-2),var(--cp-green));box-shadow:0 6px 18px rgba(164,255,0,.28);border:1px solid rgba(164,255,0,.2)}
+.cp-icon-circle.soft{box-shadow:0 4px 12px rgba(164,255,0,.22);border-color:rgba(164,255,0,.15)}
+.cp-title-soft{color:var(--cp-green);text-shadow:0 0 4px rgba(164,255,0,.28)}
+@media (max-width:768px){.cp-title{font-size:2.25rem}.cards-cp{gap:1.25rem}.cp-card{padding:1.25rem}}
