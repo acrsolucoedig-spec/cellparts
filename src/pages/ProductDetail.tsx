@@ -11,6 +11,7 @@ import { useCart } from '@/hooks/useCart';
 import { ProductReviews } from '@/components/ProductReviews';
 import { CreateReview } from '@/components/CreateReview';
 import { Product, ProductCategory } from '@/types/product';
+import { ReviewType } from '@/types/review';
 import PageHeader from '@/components/PageHeader';
 
 const ProductDetail = () => {
@@ -221,7 +222,7 @@ const ProductDetail = () => {
             <TabsContent value="reviews" className="space-y-6">
               {showReviewForm ? (
                 <CreateReview
-                  type="product"
+                  type={ReviewType.PRODUCT}
                   productId={product.id}
                   onReviewCreated={() => {
                     setShowReviewForm(false);
